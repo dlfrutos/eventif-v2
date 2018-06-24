@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Eventif</string>
+    <string name="campus_name">Feito em Canoinhas com muito amor</string>
+    <string name="first_day">05/10</string>
+    <string name="second_day">06/10</string>
+    <string name="complete_schedule">Todos</string>
+    <string name="none_selected_event">Nenhum evento selecionado!</string>
+    <string name="notifications_checkbox">Receber notificações sobre os eventos</string>
+    <string name="speaker_image">Imagem do palestrante</string>
+    <string name="contact_info">Em caso de dúvidas, entre em contato com email.email@ifsc.edu.br</string>
+    <string name="select_event">Selecione um evento</string>
+    <string name="none_available_event">Nenhum evento disponível</string>
+    <string name="title_home">Home</string>
+    <string name="eventImage">Imagem do evento</string>
+    <string name="third_day">17/10</string>
+    <string name="API_KEY">AIzaSyAQnjhr3mRJw8PhjtiqKRnPzg_KCGbhcuM</string>
+    <string name="facebook_app_id">226215421302048</string>
+    <string name="fb_login_protocol_scheme">fb226215421302048</string>
+    <string name="not_log_in">Sessão não iniciada</string>
+</resources>

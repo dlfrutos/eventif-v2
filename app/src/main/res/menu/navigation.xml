@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/daysMenu">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_day1"
+        android:enabled="false"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="@string/first_day" />
+
+    <item
+        android:id="@+id/navigation_day2"
+        android:enabled="false"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="@string/second_day" />
+
+    <item
+        android:id="@+id/navigation_all"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="@string/complete_schedule" />
+
+</menu>

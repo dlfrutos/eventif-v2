@@ -1,0 +1,18 @@
+{
+  "events": [
+    { "id": 2, "name": "Semana de informática", 
+      "description": "Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. Escape is not his plan.", 
+      "contactInfo": "Em caso de dúvidas, entre em contato com informatica@ifsc.edu.br" },
+    { "id": 1, "name": "Semana de edificacoes", "description": "Pior evento", "contactInfo": "Em caso de dúvidas, entre em contato com alimentos@ifsc.edu.br" }
+  ],
+  "talks": [
+    { "id": 1, "name": "Alimentos 1", "eventId": 1, "day":"05/10", "speaker": "Palestrante 1 Alimentos", "time": "19h00", "description": "Vou falir, e agora !?" },
+    { "id": 2, "name": "Alimentos 2", "eventId": 1, "day":"06/10",  "speaker": "Palestrante Luciano", "time": "20h30", "description": "Vou falir, e agora !?" },
+    { "id": 4, "name": "Como fazer vídeos cantando no Facebook", "eventId": 2, "day":"06/10",  "speaker": "Flávio", "time": "09h30", "description": "Palestra que ajuda você cantor a realizar seu sonho de se tornar famoso cantando através de vídeos no facebook" },
+    { "id": 10, "name": "Como saber se a carne está assada ou não", "eventId": 2, "day":"06/10",  "speaker": "Flávio", "time": "09h30", "description": "Acho que está carne não está boa, tem que voltar ao fogo" },
+    { "id": 7, "name": "Introdução ao Django com Quentin Tarantino", "eventId": 2, "day":"06/10",  "speaker": "Alexandre", "time": "12h00", "description": "Filme Django Livre" },
+    { "id": 9, "name": "Você sabe o que é um SWITCH ?", "eventId": 2, "day":"07/10",  "speaker": "Tamer Cavalcante", "time": "12h00", "description": "Você sabe o que é um SWITCH ?" },
+    { "id": 11, "name": "Meu WiFi não funciona, vou morrer ?", "eventId": 2, "day":"07/10",  "speaker": "Diego R. Wille", "time": "12h00", "description": "Você sabe o que é um SWITCH ?" },
+    { "id": 8, "name": "Vou falir, e agora !?", "eventId": 2, "day":"06/10",  "speaker": "Jefferson", "time": "13h30", "description": "Vou falir, e agora !?" }
+  ]
+}
