@@ -37,7 +37,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     override fun onResume() {
         super.onResume()
         mMap?.onResume()
-        textViewEventDescription.text = arguments!!.getString("eventDescription")
+       textViewEventDescription.text = arguments!!.getString("eventDescription")
         textViewContactInfo.text = arguments!!.getString("contactInfo")
     }
 

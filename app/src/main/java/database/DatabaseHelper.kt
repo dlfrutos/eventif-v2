@@ -16,6 +16,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASENAME,
     }
 
     override fun onCreate(database: SQLiteDatabase?) {
+        drop(database)
         var query = "CREATE TABLE EVENT (id INT PRIMARY KEY, name TEXT, description TEXT, contactInfo TEXT); "
         database!!.execSQL(query)
         database.execSQL("CREATE TABLE TALKS (id INT PRIMARY KEY, name TEXT, eventId INT, day TEXT, speaker TEXT, time TEXT, description TEXT);")

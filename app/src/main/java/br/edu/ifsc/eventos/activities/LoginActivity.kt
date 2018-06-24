@@ -24,17 +24,7 @@ import com.facebook.login.widget.LoginButton
 import android.widget.TextView
 import android.graphics.Paint.UNDERLINE_TEXT_FLAG
 
-
-
-
-
-
-
-
-
-
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
-
     private var googleApiClient: GoogleApiClient? = null
     private var signInButton: SignInButton? = null
     private var loginButton: LoginButton? = null
@@ -74,7 +64,6 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             }
 
             override fun onCancel() {
-
             }
 
             override fun onError(exception: FacebookException) {
@@ -107,7 +96,6 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     }
 
     private fun handleSignInResult(result: GoogleSignInResult) {
-
         if(result.isSuccess()) {
             goMainScreen();
         } else {
@@ -120,5 +108,4 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
     }
-
 }
