@@ -6,7 +6,6 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'com.google.gms.google-services'
 
-
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -46,4 +45,3 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.0'
     implementation 'com.facebook.android:facebook-login:[4,5)'
 }
-
