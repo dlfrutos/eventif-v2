@@ -34,8 +34,8 @@ class RegisterActivity : AppCompatActivity() {
         txtLastName=findViewById(R.id.txtLastName)
         txtEmail=findViewById(R.id.txtEmail)
         txtPassword=findViewById(R.id.txtPassword)
-
         progressBar = findViewById(R.id.progressBar)
+
         database= FirebaseDatabase.getInstance()
         auth=FirebaseAuth.getInstance()
 

@@ -13,14 +13,13 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signInButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <com.facebook.login.widget.LoginButton
@@ -35,7 +34,7 @@
         app:layout_constraintDimensionRatio=""
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -53,7 +52,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:contentDescription="Continuar sem fazer login."
@@ -62,6 +61,7 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:background="@android:color/holo_green_dark" />
 
@@ -110,33 +110,48 @@
         app:srcCompat="@drawable/banner_prefeitura" />
 
     <Button
-        android:id="@+id/button2"
-        style="@android:style/Widget.Material.Button.Colored"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtLoginEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="0dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:padding="4dp"
-        android:text="EMAIL"
+        android:text="LOGIN EMAIL"
         android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+        app:layout_constraintStart_toStartOf="@+id/button3" />
 
     <Button
         android:id="@+id/button3"
         style="@android:style/Widget.Material.Button"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_margin="0dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:padding="0dp"
-        android:text="Fazer Cadastro"
+        android:text="Quero Fazer Cadastro"
         android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="@+id/login_button"
-        app:layout_constraintStart_toStartOf="@+id/login_button"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/login_button" />
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:indeterminate="true"
+        android:padding="0dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

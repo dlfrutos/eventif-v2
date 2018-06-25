@@ -9,12 +9,11 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import br.edu.ifsc.eventos.R
-import br.edu.ifsc.eventos.R.id.txtUser
 import com.google.firebase.auth.FirebaseAuth
 
 class EmailLoginActivity : AppCompatActivity() {
 
-    private lateinit var txtUser: EditText
+    private lateinit var txtUser2: EditText
     private lateinit var txtPassword2: EditText
 
     private lateinit var progressBar2: ProgressBar
@@ -24,9 +23,10 @@ class EmailLoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_email_login)
 
-        txtUser=findViewById(R.id.txtUser)
+
+        txtUser2 = findViewById(R.id.txtUser2)
         txtPassword2=findViewById(R.id.txtPassword2)
         progressBar2 = findViewById(R.id.progressBar2)
         auth= FirebaseAuth.getInstance()
@@ -45,7 +45,7 @@ class EmailLoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser(){
-        val user:String=txtUser.text.toString()
+        val user:String=txtUser2.text.toString()
         val password:String=txtPassword2.text.toString()
 
         if(!TextUtils.isEmpty(user) && !TextUtils.isEmpty(password)  ){

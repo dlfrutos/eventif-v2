@@ -23,6 +23,8 @@ import com.facebook.login.LoginManager
 import com.facebook.login.widget.LoginButton
 import android.widget.TextView
 import android.graphics.Paint.UNDERLINE_TEXT_FLAG
+import android.widget.ProgressBar
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
     private var googleApiClient: GoogleApiClient? = null
@@ -30,10 +32,16 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     private var loginButton: LoginButton? = null
     val SIGN_IN_CODE = 777;
     var callbackManager = CallbackManager.Factory.create();
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_login)
+
+        progressBar =findViewById(R.id.progressBar4)
+
+
         getSupportActionBar()!!.setTitle("Login")
 
         // Google Login
@@ -79,10 +87,22 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 goMainScreen()
             }
         })
+
+
+        txtLoginEmail.setOnClickListener{
+            progressBar.visibility=View.VISIBLE
+            val intent = Intent(this, EmailLoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
+    override fun onResume() {
+        super.onResume()
+        progressBar.visibility=View.GONE
+
+    }
     override fun onConnectionFailed(p0: ConnectionResult) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Toast.makeText(this, "Falha na conexão.", Toast.LENGTH_SHORT).show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

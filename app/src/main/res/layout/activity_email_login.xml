@@ -11,20 +11,18 @@
     >
 
 
-
-
     <TextView
         android:id="@+id/textViewTelaLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tela de Login"
+        android:text="Login de usuário"
         android:layout_margin="10dp"
         android:gravity="center"
         android:textSize="24dp"
         />
 
     <EditText
-        android:id="@+id/txtUser"
+        android:id="@+id/txtUser2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
