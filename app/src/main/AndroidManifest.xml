@@ -56,7 +56,9 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.EmailLoginActivity"></activity>
+        <activity android:name=".activities.EmailLoginActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity"></activity>
     </application>
 
 </manifest>

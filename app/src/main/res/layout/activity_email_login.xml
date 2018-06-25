@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.EmailLoginActivity">
+    tools:context=".activities.LoginActivity"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
 
-</android.support.constraint.ConstraintLayout>
+
+
+
+    <TextView
+        android:id="@+id/textViewTelaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tela de Login"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="24dp"
+        />
+
+    <EditText
+        android:id="@+id/txtUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+
+        android:layout_margin="10dp"
+        />
+
+    <EditText
+        android:id="@+id/txtPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Senha"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:onClick="login"
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/txtLostPassword"
+        android:onClick="forgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Esqueceu a senha?"
+        android:gravity="center"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/txtCadastrar"
+        android:onClick="register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fazer Cadastro"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_margin="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:indeterminate="true"
+        />
+
+
+</LinearLayout>

@@ -76,7 +76,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         tv.setOnClickListener(object : View.OnClickListener {
 
             override fun onClick(v: View) {
-            goMainScreen()
+                goMainScreen()
             }
         })
     }
