@@ -1,0 +1,4 @@
+E:\OneDrive\ProgramasAndroidStudio\eventif-android-master\eventif-android-master>json-server --watch db.json --host "192.168.0.108"
+
+chave para usar o maps
+AIzaSyDoER1t3xx4FMmMrLWlg27IVJQtONQuUAU

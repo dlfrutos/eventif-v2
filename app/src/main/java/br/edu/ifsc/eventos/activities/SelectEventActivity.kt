@@ -68,7 +68,7 @@ class SelectEventActivity : AppCompatActivity() {
         call.enqueue(object : Callback<List<Event>?> {
             override fun onResponse(call: Call<List<Event>?>?,
                                     response: Response<List<Event>?>?) {
-                response?.body()?.let(events::addAll)
+                val let = response?.body()?.let(events::addAll)
                 Log.e("ERROR", events[1].name)
                 if (events.isEmpty())
                     events.add(Event(0, getString(R.string.none_available_event), "", ""))

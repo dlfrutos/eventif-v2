@@ -5,8 +5,14 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.os.Build
+import android.support.annotation.RequiresApi
 import br.edu.ifsc.eventos.entities.Event
 import br.edu.ifsc.eventos.entities.Talk
+import java.time.DateTimeException
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASENAME, null, DATABASEVERSION) {
 
@@ -15,11 +21,15 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASENAME,
         private val DATABASEVERSION = 1
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(database: SQLiteDatabase?) {
         drop(database)
         var query = "CREATE TABLE EVENT (id INT PRIMARY KEY, name TEXT, description TEXT, contactInfo TEXT); "
         database!!.execSQL(query)
         database.execSQL("CREATE TABLE TALKS (id INT PRIMARY KEY, name TEXT, eventId INT, day TEXT, speaker TEXT, time TEXT, description TEXT);")
+
+        val now = LocalDateTime.now()
+        var formatter = DateTimeFormatter.ofPattern("dd/mm/aaaa HH:MM:ss")
 
     }
 
